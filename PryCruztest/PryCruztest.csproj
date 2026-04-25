@@ -95,5 +95,11 @@
   <ItemGroup>
     <None Include="Resources\pngtree-online-marketing-and-business-growth-in-a-blue-backdrop-3d-render-image_3693014.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\light-blue-background-gradient-wall-design-vector.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\c75e54b49c78217df0c8f5898a76cea7.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

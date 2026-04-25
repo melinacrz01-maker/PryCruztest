@@ -63,9 +63,29 @@ namespace PryCruztest.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap c75e54b49c78217df0c8f5898a76cea7 {
+            get {
+                object obj = ResourceManager.GetObject("c75e54b49c78217df0c8f5898a76cea7", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap galweb_banner {
             get {
                 object obj = ResourceManager.GetObject("galweb-banner", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap light_blue_background_gradient_wall_design_vector {
+            get {
+                object obj = ResourceManager.GetObject("light-blue-background-gradient-wall-design-vector", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -121,7 +121,13 @@
   <data name="galweb-banner" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\galweb-banner.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="light-blue-background-gradient-wall-design-vector" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\light-blue-background-gradient-wall-design-vector.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="pngtree-online-marketing-and-business-growth-in-a-blue-backdrop-3d-render-image_3693014" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pngtree-online-marketing-and-business-growth-in-a-blue-backdrop-3d-render-image_3693014.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="c75e54b49c78217df0c8f5898a76cea7" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\c75e54b49c78217df0c8f5898a76cea7.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

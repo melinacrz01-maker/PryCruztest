@@ -35,22 +35,23 @@
             // lbliniciar
             // 
             this.lbliniciar.AutoSize = true;
-            this.lbliniciar.BackColor = System.Drawing.Color.PowderBlue;
+            this.lbliniciar.BackColor = System.Drawing.Color.LightCyan;
             this.lbliniciar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbliniciar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.lbliniciar.Location = new System.Drawing.Point(101, 166);
+            this.lbliniciar.Location = new System.Drawing.Point(120, 198);
             this.lbliniciar.Name = "lbliniciar";
             this.lbliniciar.Size = new System.Drawing.Size(76, 20);
             this.lbliniciar.TabIndex = 0;
             this.lbliniciar.Text = "INICIAR";
+            this.lbliniciar.Click += new System.EventHandler(this.lbliniciar_Click);
             // 
             // Frminicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::PryCruztest.Properties.Resources.galweb_banner;
+            this.BackgroundImage = global::PryCruztest.Properties.Resources.c75e54b49c78217df0c8f5898a76cea7;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(291, 195);
+            this.ClientSize = new System.Drawing.Size(310, 247);
             this.Controls.Add(this.lbliniciar);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Frminicio";

@@ -16,5 +16,11 @@ namespace PryCruztest
         {
             InitializeComponent();
         }
+        
+        private void lbliniciar_Click(object sender, EventArgs e)
+        {
+            var ventana = new frmcargadeproductos();
+            ventana.ShowDialog();
+        }
     }
 }
