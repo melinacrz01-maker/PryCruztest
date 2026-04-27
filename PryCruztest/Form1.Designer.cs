@@ -55,7 +55,7 @@
             this.Controls.Add(this.lbliniciar);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Frminicio";
-            this.Text = "Form1";
+            this.Text = "FrmInicio";
             this.ResumeLayout(false);
             this.PerformLayout();
 

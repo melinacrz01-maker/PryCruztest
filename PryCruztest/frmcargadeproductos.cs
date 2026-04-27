@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics.Eventing.Reader;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -24,25 +25,22 @@ namespace PryCruztest
 
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
-            string nombre = txtNombre.Text.Trim();
-
-            if (string.IsNullOrEmpty(nombre))
+            if (txtNombre.Text == "")
             {
-                MessageBox.Show("Por favor nombre del Producto.");
-                return;
-            }
+                MessageBox.Show("Por favor nombre del Producto.", "Producto Registrado",MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 
-            if (cmbBoxlista.Items.Contains(nombre))
+                txtNombre.Focus();
+            }
+            else
             {
-                MessageBox.Show("El producto \"" + nombre + "\" ya está en la lista.");
-                return;
+                cmbListaProducto.Items.Add(txtNombre.Text);
+                cmbProducte.Items.Add(txtNombre.Text);
+                MessageBox.Show("Nombre resgistrado correctamente.");
+                txtNombre.Text ="";
+                txtNombre.Focus();
             }
-
-            cmbBoxlista.Items.Add(nombre);
-            txtNombre.Clear();
-            txtNombre.Focus();
         }
-
+                
         private void txtNombre_TextChanged(object sender, EventArgs e)
         {
 
@@ -51,6 +49,32 @@ namespace PryCruztest
         private void cmbBoxlista_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void lblNombre_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void grbDatos_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmbProducte_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSiguiente_Click(object sender, EventArgs e)
+        {
+            grbDatos.Visible = false;
+            grbProductos.Visible = true;
+        }
+
+        private void grbProductos_Enter(object sender, EventArgs e)
+        {
+            
         }
     }
 }

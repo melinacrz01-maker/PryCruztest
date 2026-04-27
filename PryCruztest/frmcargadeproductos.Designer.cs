@@ -28,24 +28,27 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmcargadeproductos));
             this.lblNombre = new System.Windows.Forms.Label();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.btnRegistrar = new System.Windows.Forms.Button();
             this.lblLista = new System.Windows.Forms.Label();
-            this.cmbBoxlista = new System.Windows.Forms.ComboBox();
+            this.cmbListaProducto = new System.Windows.Forms.ComboBox();
             this.btnSiguiente = new System.Windows.Forms.Button();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btnSiguient = new System.Windows.Forms.Button();
+            this.grbProductos = new System.Windows.Forms.GroupBox();
+            this.rdbRemoto = new System.Windows.Forms.RadioButton();
+            this.rdbEquipo = new System.Windows.Forms.RadioButton();
             this.checkBox3 = new System.Windows.Forms.CheckBox();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.checkBxEquipo = new System.Windows.Forms.CheckBox();
-            this.checkbxRemoto = new System.Windows.Forms.CheckBox();
+            this.lblAdicional = new System.Windows.Forms.Label();
             this.lblTipo = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cmbProducte = new System.Windows.Forms.ComboBox();
             this.lblProductos = new System.Windows.Forms.Label();
-            this.groupBox1.SuspendLayout();
+            this.grbDatos = new System.Windows.Forms.GroupBox();
+            this.btnfinalizar = new System.Windows.Forms.Button();
+            this.grbProductos.SuspendLayout();
+            this.grbDatos.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblNombre
@@ -53,16 +56,17 @@
             this.lblNombre.AutoSize = true;
             this.lblNombre.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.lblNombre.Location = new System.Drawing.Point(16, 19);
+            this.lblNombre.Location = new System.Drawing.Point(6, 28);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(61, 16);
             this.lblNombre.TabIndex = 0;
             this.lblNombre.Text = "Nombre:";
+            this.lblNombre.Click += new System.EventHandler(this.lblNombre_Click);
             // 
             // txtNombre
             // 
             this.txtNombre.BackColor = System.Drawing.Color.White;
-            this.txtNombre.Location = new System.Drawing.Point(83, 19);
+            this.txtNombre.Location = new System.Drawing.Point(73, 27);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(146, 20);
             this.txtNombre.TabIndex = 1;
@@ -72,7 +76,7 @@
             // 
             this.btnRegistrar.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.btnRegistrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegistrar.Location = new System.Drawing.Point(251, 15);
+            this.btnRegistrar.Location = new System.Drawing.Point(239, 23);
             this.btnRegistrar.Name = "btnRegistrar";
             this.btnRegistrar.Size = new System.Drawing.Size(113, 27);
             this.btnRegistrar.TabIndex = 2;
@@ -85,64 +89,83 @@
             this.lblLista.AutoSize = true;
             this.lblLista.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLista.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.lblLista.Location = new System.Drawing.Point(28, 68);
+            this.lblLista.Location = new System.Drawing.Point(24, 79);
             this.lblLista.Name = "lblLista";
-            this.lblLista.Size = new System.Drawing.Size(37, 16);
+            this.lblLista.Size = new System.Drawing.Size(41, 16);
             this.lblLista.TabIndex = 3;
-            this.lblLista.Text = "Lista";
+            this.lblLista.Text = "Lista:";
             // 
-            // cmbBoxlista
+            // cmbListaProducto
             // 
-            this.cmbBoxlista.FormattingEnabled = true;
-            this.cmbBoxlista.Location = new System.Drawing.Point(71, 63);
-            this.cmbBoxlista.Name = "cmbBoxlista";
-            this.cmbBoxlista.Size = new System.Drawing.Size(158, 21);
-            this.cmbBoxlista.TabIndex = 4;
-            this.cmbBoxlista.SelectedIndexChanged += new System.EventHandler(this.cmbBoxlista_SelectedIndexChanged);
+            this.cmbListaProducto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbListaProducto.FormattingEnabled = true;
+            this.cmbListaProducto.Location = new System.Drawing.Point(73, 74);
+            this.cmbListaProducto.Name = "cmbListaProducto";
+            this.cmbListaProducto.Size = new System.Drawing.Size(146, 21);
+            this.cmbListaProducto.TabIndex = 4;
+            this.cmbListaProducto.SelectedIndexChanged += new System.EventHandler(this.cmbBoxlista_SelectedIndexChanged);
             // 
             // btnSiguiente
             // 
             this.btnSiguiente.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.btnSiguiente.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSiguiente.Location = new System.Drawing.Point(251, 59);
+            this.btnSiguiente.Location = new System.Drawing.Point(239, 70);
             this.btnSiguiente.Name = "btnSiguiente";
             this.btnSiguiente.Size = new System.Drawing.Size(113, 27);
             this.btnSiguiente.TabIndex = 5;
             this.btnSiguiente.Text = "Siguiente";
             this.btnSiguiente.UseVisualStyleBackColor = false;
+            this.btnSiguiente.Click += new System.EventHandler(this.btnSiguiente_Click);
             // 
-            // groupBox1
+            // grbProductos
             // 
-            this.groupBox1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.groupBox1.BackgroundImage = global::PryCruztest.Properties.Resources.light_blue_background_gradient_wall_design_vector;
-            this.groupBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.groupBox1.Controls.Add(this.btnSiguient);
-            this.groupBox1.Controls.Add(this.checkBox3);
-            this.groupBox1.Controls.Add(this.checkBox2);
-            this.groupBox1.Controls.Add(this.checkBox1);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.checkBxEquipo);
-            this.groupBox1.Controls.Add(this.checkbxRemoto);
-            this.groupBox1.Controls.Add(this.lblTipo);
-            this.groupBox1.Controls.Add(this.comboBox1);
-            this.groupBox1.Controls.Add(this.lblProductos);
-            this.groupBox1.Location = new System.Drawing.Point(12, 117);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(368, 252);
-            this.groupBox1.TabIndex = 6;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Carga de Productos";
+            this.grbProductos.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.grbProductos.BackgroundImage = global::PryCruztest.Properties.Resources.light_blue_background_gradient_wall_design_vector;
+            this.grbProductos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.grbProductos.Controls.Add(this.btnfinalizar);
+            this.grbProductos.Controls.Add(this.rdbRemoto);
+            this.grbProductos.Controls.Add(this.rdbEquipo);
+            this.grbProductos.Controls.Add(this.checkBox3);
+            this.grbProductos.Controls.Add(this.checkBox2);
+            this.grbProductos.Controls.Add(this.checkBox1);
+            this.grbProductos.Controls.Add(this.lblAdicional);
+            this.grbProductos.Controls.Add(this.lblTipo);
+            this.grbProductos.Controls.Add(this.cmbProducte);
+            this.grbProductos.Controls.Add(this.lblProductos);
+            this.grbProductos.Location = new System.Drawing.Point(12, 148);
+            this.grbProductos.Name = "grbProductos";
+            this.grbProductos.Size = new System.Drawing.Size(368, 253);
+            this.grbProductos.TabIndex = 6;
+            this.grbProductos.TabStop = false;
+            this.grbProductos.Text = "Carga de Productos";
+            this.grbProductos.Visible = false;
+            this.grbProductos.Enter += new System.EventHandler(this.grbProductos_Enter);
             // 
-            // btnSiguient
+            // rdbRemoto
             // 
-            this.btnSiguient.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.btnSiguient.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSiguient.Location = new System.Drawing.Point(214, 198);
-            this.btnSiguient.Name = "btnSiguient";
-            this.btnSiguient.Size = new System.Drawing.Size(107, 25);
-            this.btnSiguient.TabIndex = 14;
-            this.btnSiguient.Text = "Siguiente";
-            this.btnSiguient.UseVisualStyleBackColor = false;
+            this.rdbRemoto.AutoSize = true;
+            this.rdbRemoto.BackColor = System.Drawing.Color.Transparent;
+            this.rdbRemoto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdbRemoto.Location = new System.Drawing.Point(185, 85);
+            this.rdbRemoto.Name = "rdbRemoto";
+            this.rdbRemoto.Size = new System.Drawing.Size(75, 19);
+            this.rdbRemoto.TabIndex = 16;
+            this.rdbRemoto.TabStop = true;
+            this.rdbRemoto.Text = "Remoto";
+            this.rdbRemoto.UseVisualStyleBackColor = false;
+            // 
+            // rdbEquipo
+            // 
+            this.rdbEquipo.AutoSize = true;
+            this.rdbEquipo.BackColor = System.Drawing.Color.Transparent;
+            this.rdbEquipo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdbEquipo.Location = new System.Drawing.Point(92, 83);
+            this.rdbEquipo.Name = "rdbEquipo";
+            this.rdbEquipo.Size = new System.Drawing.Size(70, 19);
+            this.rdbEquipo.TabIndex = 15;
+            this.rdbEquipo.TabStop = true;
+            this.rdbEquipo.Text = "Equipo";
+            this.rdbEquipo.UseVisualStyleBackColor = false;
             // 
             // checkBox3
             // 
@@ -181,42 +204,17 @@
             this.checkBox1.Text = "Inatalación";
             this.checkBox1.UseVisualStyleBackColor = false;
             // 
-            // label1
+            // lblAdicional
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.label1.Location = new System.Drawing.Point(6, 125);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(72, 18);
-            this.label1.TabIndex = 10;
-            this.label1.Text = "Adicional";
-            // 
-            // checkBxEquipo
-            // 
-            this.checkBxEquipo.AutoSize = true;
-            this.checkBxEquipo.BackColor = System.Drawing.Color.Transparent;
-            this.checkBxEquipo.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBxEquipo.Location = new System.Drawing.Point(190, 84);
-            this.checkBxEquipo.Name = "checkBxEquipo";
-            this.checkBxEquipo.Size = new System.Drawing.Size(70, 20);
-            this.checkBxEquipo.TabIndex = 9;
-            this.checkBxEquipo.Text = "Equipo";
-            this.checkBxEquipo.UseVisualStyleBackColor = false;
-            // 
-            // checkbxRemoto
-            // 
-            this.checkbxRemoto.AutoSize = true;
-            this.checkbxRemoto.BackColor = System.Drawing.Color.Transparent;
-            this.checkbxRemoto.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkbxRemoto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.checkbxRemoto.Location = new System.Drawing.Point(92, 84);
-            this.checkbxRemoto.Name = "checkbxRemoto";
-            this.checkbxRemoto.Size = new System.Drawing.Size(75, 20);
-            this.checkbxRemoto.TabIndex = 8;
-            this.checkbxRemoto.Text = "Remoto";
-            this.checkbxRemoto.UseVisualStyleBackColor = false;
+            this.lblAdicional.AutoSize = true;
+            this.lblAdicional.BackColor = System.Drawing.Color.Transparent;
+            this.lblAdicional.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAdicional.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.lblAdicional.Location = new System.Drawing.Point(6, 125);
+            this.lblAdicional.Name = "lblAdicional";
+            this.lblAdicional.Size = new System.Drawing.Size(72, 18);
+            this.lblAdicional.TabIndex = 10;
+            this.lblAdicional.Text = "Adicional";
             // 
             // lblTipo
             // 
@@ -230,13 +228,14 @@
             this.lblTipo.TabIndex = 7;
             this.lblTipo.Text = "Tipo";
             // 
-            // comboBox1
+            // cmbProducte
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(92, 40);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(168, 21);
-            this.comboBox1.TabIndex = 1;
+            this.cmbProducte.FormattingEnabled = true;
+            this.cmbProducte.Location = new System.Drawing.Point(92, 40);
+            this.cmbProducte.Name = "cmbProducte";
+            this.cmbProducte.Size = new System.Drawing.Size(168, 21);
+            this.cmbProducte.TabIndex = 1;
+            this.cmbProducte.SelectedIndexChanged += new System.EventHandler(this.cmbProducte_SelectedIndexChanged);
             // 
             // lblProductos
             // 
@@ -249,27 +248,53 @@
             this.lblProductos.TabIndex = 0;
             this.lblProductos.Text = "Productos";
             // 
+            // grbDatos
+            // 
+            this.grbDatos.BackColor = System.Drawing.Color.MintCream;
+            this.grbDatos.Controls.Add(this.lblNombre);
+            this.grbDatos.Controls.Add(this.btnRegistrar);
+            this.grbDatos.Controls.Add(this.btnSiguiente);
+            this.grbDatos.Controls.Add(this.txtNombre);
+            this.grbDatos.Controls.Add(this.cmbListaProducto);
+            this.grbDatos.Controls.Add(this.lblLista);
+            this.grbDatos.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grbDatos.Location = new System.Drawing.Point(12, 24);
+            this.grbDatos.Name = "grbDatos";
+            this.grbDatos.Size = new System.Drawing.Size(368, 118);
+            this.grbDatos.TabIndex = 15;
+            this.grbDatos.TabStop = false;
+            this.grbDatos.Text = "Datos";
+            this.grbDatos.Enter += new System.EventHandler(this.grbDatos_Enter);
+            // 
+            // btnfinalizar
+            // 
+            this.btnfinalizar.BackColor = System.Drawing.SystemColors.Window;
+            this.btnfinalizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnfinalizar.Location = new System.Drawing.Point(211, 205);
+            this.btnfinalizar.Name = "btnfinalizar";
+            this.btnfinalizar.Size = new System.Drawing.Size(117, 28);
+            this.btnfinalizar.TabIndex = 17;
+            this.btnfinalizar.Text = "Finalizar";
+            this.btnfinalizar.UseVisualStyleBackColor = false;
+            // 
             // frmcargadeproductos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Azure;
-            this.ClientSize = new System.Drawing.Size(392, 389);
-            this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.btnSiguiente);
-            this.Controls.Add(this.cmbBoxlista);
-            this.Controls.Add(this.lblLista);
-            this.Controls.Add(this.btnRegistrar);
-            this.Controls.Add(this.txtNombre);
-            this.Controls.Add(this.lblNombre);
+            this.ClientSize = new System.Drawing.Size(433, 425);
+            this.Controls.Add(this.grbProductos);
+            this.Controls.Add(this.grbDatos);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmcargadeproductos";
-            this.Text = "frmcargadeproductos";
+            this.Text = "Frmcargadeproductos";
             this.Load += new System.EventHandler(this.frmcargadeproductos_Load);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.grbProductos.ResumeLayout(false);
+            this.grbProductos.PerformLayout();
+            this.grbDatos.ResumeLayout(false);
+            this.grbDatos.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -279,18 +304,19 @@
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Button btnRegistrar;
         private System.Windows.Forms.Label lblLista;
-        private System.Windows.Forms.ComboBox cmbBoxlista;
+        private System.Windows.Forms.ComboBox cmbListaProducto;
         private System.Windows.Forms.Button btnSiguiente;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.GroupBox grbProductos;
+        private System.Windows.Forms.ComboBox cmbProducte;
         private System.Windows.Forms.Label lblProductos;
-        private System.Windows.Forms.CheckBox checkbxRemoto;
         private System.Windows.Forms.Label lblTipo;
-        private System.Windows.Forms.CheckBox checkBxEquipo;
         private System.Windows.Forms.CheckBox checkBox3;
         private System.Windows.Forms.CheckBox checkBox2;
         private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnSiguient;
+        private System.Windows.Forms.Label lblAdicional;
+        private System.Windows.Forms.GroupBox grbDatos;
+        private System.Windows.Forms.RadioButton rdbRemoto;
+        private System.Windows.Forms.RadioButton rdbEquipo;
+        private System.Windows.Forms.Button btnfinalizar;
     }
 }
