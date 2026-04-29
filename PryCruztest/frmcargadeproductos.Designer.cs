@@ -36,17 +36,17 @@
             this.cmbListaProducto = new System.Windows.Forms.ComboBox();
             this.btnSiguiente = new System.Windows.Forms.Button();
             this.grbProductos = new System.Windows.Forms.GroupBox();
+            this.btnfinalizar = new System.Windows.Forms.Button();
             this.rdbRemoto = new System.Windows.Forms.RadioButton();
             this.rdbEquipo = new System.Windows.Forms.RadioButton();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.chkGarantia = new System.Windows.Forms.CheckBox();
+            this.chkEnvio = new System.Windows.Forms.CheckBox();
+            this.chkinstalacion = new System.Windows.Forms.CheckBox();
             this.lblAdicional = new System.Windows.Forms.Label();
             this.lblTipo = new System.Windows.Forms.Label();
             this.cmbProducte = new System.Windows.Forms.ComboBox();
             this.lblProductos = new System.Windows.Forms.Label();
             this.grbDatos = new System.Windows.Forms.GroupBox();
-            this.btnfinalizar = new System.Windows.Forms.Button();
             this.grbProductos.SuspendLayout();
             this.grbDatos.SuspendLayout();
             this.SuspendLayout();
@@ -125,9 +125,9 @@
             this.grbProductos.Controls.Add(this.btnfinalizar);
             this.grbProductos.Controls.Add(this.rdbRemoto);
             this.grbProductos.Controls.Add(this.rdbEquipo);
-            this.grbProductos.Controls.Add(this.checkBox3);
-            this.grbProductos.Controls.Add(this.checkBox2);
-            this.grbProductos.Controls.Add(this.checkBox1);
+            this.grbProductos.Controls.Add(this.chkGarantia);
+            this.grbProductos.Controls.Add(this.chkEnvio);
+            this.grbProductos.Controls.Add(this.chkinstalacion);
             this.grbProductos.Controls.Add(this.lblAdicional);
             this.grbProductos.Controls.Add(this.lblTipo);
             this.grbProductos.Controls.Add(this.cmbProducte);
@@ -140,6 +140,18 @@
             this.grbProductos.Text = "Carga de Productos";
             this.grbProductos.Visible = false;
             this.grbProductos.Enter += new System.EventHandler(this.grbProductos_Enter);
+            // 
+            // btnfinalizar
+            // 
+            this.btnfinalizar.BackColor = System.Drawing.SystemColors.Window;
+            this.btnfinalizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnfinalizar.Location = new System.Drawing.Point(211, 205);
+            this.btnfinalizar.Name = "btnfinalizar";
+            this.btnfinalizar.Size = new System.Drawing.Size(117, 28);
+            this.btnfinalizar.TabIndex = 17;
+            this.btnfinalizar.Text = "Finalizar";
+            this.btnfinalizar.UseVisualStyleBackColor = false;
+            this.btnfinalizar.Click += new System.EventHandler(this.btnfinalizar_Click);
             // 
             // rdbRemoto
             // 
@@ -167,42 +179,42 @@
             this.rdbEquipo.Text = "Equipo";
             this.rdbEquipo.UseVisualStyleBackColor = false;
             // 
-            // checkBox3
+            // chkGarantia
             // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.BackColor = System.Drawing.Color.Transparent;
-            this.checkBox3.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox3.Location = new System.Drawing.Point(92, 175);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(81, 20);
-            this.checkBox3.TabIndex = 13;
-            this.checkBox3.Text = "Garantia";
-            this.checkBox3.UseVisualStyleBackColor = false;
+            this.chkGarantia.AutoSize = true;
+            this.chkGarantia.BackColor = System.Drawing.Color.Transparent;
+            this.chkGarantia.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkGarantia.Location = new System.Drawing.Point(92, 175);
+            this.chkGarantia.Name = "chkGarantia";
+            this.chkGarantia.Size = new System.Drawing.Size(81, 20);
+            this.chkGarantia.TabIndex = 13;
+            this.chkGarantia.Text = "Garantía";
+            this.chkGarantia.UseVisualStyleBackColor = false;
             // 
-            // checkBox2
+            // chkEnvio
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.BackColor = System.Drawing.Color.Transparent;
-            this.checkBox2.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox2.Location = new System.Drawing.Point(92, 149);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(61, 20);
-            this.checkBox2.TabIndex = 12;
-            this.checkBox2.Text = "Envio";
-            this.checkBox2.UseVisualStyleBackColor = false;
+            this.chkEnvio.AutoSize = true;
+            this.chkEnvio.BackColor = System.Drawing.Color.Transparent;
+            this.chkEnvio.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkEnvio.Location = new System.Drawing.Point(92, 149);
+            this.chkEnvio.Name = "chkEnvio";
+            this.chkEnvio.Size = new System.Drawing.Size(61, 20);
+            this.chkEnvio.TabIndex = 12;
+            this.chkEnvio.Text = "Envío";
+            this.chkEnvio.UseVisualStyleBackColor = false;
             // 
-            // checkBox1
+            // chkinstalacion
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.BackColor = System.Drawing.Color.Transparent;
-            this.checkBox1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.checkBox1.Location = new System.Drawing.Point(92, 123);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(97, 20);
-            this.checkBox1.TabIndex = 11;
-            this.checkBox1.Text = "Inatalación";
-            this.checkBox1.UseVisualStyleBackColor = false;
+            this.chkinstalacion.AutoSize = true;
+            this.chkinstalacion.BackColor = System.Drawing.Color.Transparent;
+            this.chkinstalacion.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkinstalacion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.chkinstalacion.Location = new System.Drawing.Point(92, 123);
+            this.chkinstalacion.Name = "chkinstalacion";
+            this.chkinstalacion.Size = new System.Drawing.Size(97, 20);
+            this.chkinstalacion.TabIndex = 11;
+            this.chkinstalacion.Text = "Inatalación";
+            this.chkinstalacion.UseVisualStyleBackColor = false;
             // 
             // lblAdicional
             // 
@@ -266,17 +278,6 @@
             this.grbDatos.Text = "Datos";
             this.grbDatos.Enter += new System.EventHandler(this.grbDatos_Enter);
             // 
-            // btnfinalizar
-            // 
-            this.btnfinalizar.BackColor = System.Drawing.SystemColors.Window;
-            this.btnfinalizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnfinalizar.Location = new System.Drawing.Point(211, 205);
-            this.btnfinalizar.Name = "btnfinalizar";
-            this.btnfinalizar.Size = new System.Drawing.Size(117, 28);
-            this.btnfinalizar.TabIndex = 17;
-            this.btnfinalizar.Text = "Finalizar";
-            this.btnfinalizar.UseVisualStyleBackColor = false;
-            // 
             // frmcargadeproductos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -310,9 +311,9 @@
         private System.Windows.Forms.ComboBox cmbProducte;
         private System.Windows.Forms.Label lblProductos;
         private System.Windows.Forms.Label lblTipo;
-        private System.Windows.Forms.CheckBox checkBox3;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox chkGarantia;
+        private System.Windows.Forms.CheckBox chkEnvio;
+        private System.Windows.Forms.CheckBox chkinstalacion;
         private System.Windows.Forms.Label lblAdicional;
         private System.Windows.Forms.GroupBox grbDatos;
         private System.Windows.Forms.RadioButton rdbRemoto;

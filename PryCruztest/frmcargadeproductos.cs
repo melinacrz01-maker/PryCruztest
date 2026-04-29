@@ -76,5 +76,28 @@ namespace PryCruztest
         {
             
         }
+
+        private void btnfinalizar_Click(object sender, EventArgs e)
+        {
+            var producto = cmbProducte.SelectedItem.ToString();
+
+            string tipo = "(no seleccionado)";
+            if (rdbRemoto.Checked) tipo = "Remoto";
+            else if (rdbEquipo.Checked) tipo = "Equipo";
+
+            string adicional = "";
+            if (chkinstalacion.Checked) adicional += "Instalación, ";
+            if (chkEnvio.Checked) adicional += "Envío, ";
+            if (chkGarantia.Checked) adicional += "Garantía, ";
+            if (adicional == "") adicional = "(ninguno)";
+            else adicional = adicional.TrimEnd(',', ' ');
+
+            string mensaje = "Datos cargados:\n\n"
+                           + "Producto: " + producto + "\n"
+                           + "Tipo: " + tipo + "\n"
+                           + "Adicional: " + adicional;
+
+            MessageBox.Show(mensaje, "Producto Registrado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
     }
 }
