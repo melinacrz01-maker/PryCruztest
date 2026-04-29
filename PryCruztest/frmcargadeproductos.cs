@@ -35,7 +35,7 @@ namespace PryCruztest
             {
                 cmbListaProducto.Items.Add(txtNombre.Text);
                 cmbProducte.Items.Add(txtNombre.Text);
-                MessageBox.Show("Nombre resgistrado correctamente.");
+                MessageBox.Show("Nombre registrado correctamente.");
                 txtNombre.Text ="";
                 txtNombre.Focus();
             }
@@ -79,14 +79,29 @@ namespace PryCruztest
 
         private void btnfinalizar_Click(object sender, EventArgs e)
         {
-            var producto = cmbProducte.SelectedItem.ToString();
+            string producto = cmbProducte.SelectedItem.ToString();
 
             string tipo = "(no seleccionado)";
-            if (rdbRemoto.Checked) tipo = "Remoto";
-            else if (rdbEquipo.Checked) tipo = "Equipo";
+            
+            if (rdbRemoto.Checked)
+            {
+
+                tipo = "Remoto";
+                
+            }
+            else if (rdbEquipo.Checked)
+            {
+                tipo = "Equipo";
+                
+            }
 
             string adicional = "";
-            if (chkinstalacion.Checked) adicional += "Instalación, ";
+            
+            if (chkinstalacion.Checked)
+            {
+                
+            }
+adicional += "Instalación, ";
             if (chkEnvio.Checked) adicional += "Envío, ";
             if (chkGarantia.Checked) adicional += "Garantía, ";
             if (adicional == "") adicional = "(ninguno)";
