@@ -79,6 +79,14 @@ namespace PryCruztest
 
         private void btnfinalizar_Click(object sender, EventArgs e)
         {
+            int costoequipo = 1000000;
+            int Costorespuesto = 350000;
+            double costoinstalacion = 0.15;
+            double costoenvio = 0.05;
+            double costogarantia = 0.20; 
+
+            double costobase = 0;
+
             string producto = cmbProducte.SelectedItem.ToString();
 
             string tipo = "(no seleccionado)";
@@ -87,30 +95,43 @@ namespace PryCruztest
             {
 
                 tipo = "Remoto";
-                
+                costobase = Costorespuesto;
+
             }
             else if (rdbEquipo.Checked)
             {
                 tipo = "Equipo";
-                
+                costobase = costoequipo;
+
             }
 
             string adicional = "";
             
             if (chkinstalacion.Checked)
             {
-                
+                adicional += "Instalación, ";
+                costobase = costobase+(costobase* costoinstalacion);
             }
-adicional += "Instalación, ";
-            if (chkEnvio.Checked) adicional += "Envío, ";
-            if (chkGarantia.Checked) adicional += "Garantía, ";
+
+            if (chkEnvio.Checked) {
+                adicional += "Envío ";
+                costobase = costobase+ (costobase * costoenvio);
+            }
+
+            if (chkGarantia.Checked)
+            {
+                adicional += "Garantía, ";
+                costobase = costobase+(costobase * costogarantia);
+            }
+
             if (adicional == "") adicional = "(ninguno)";
             else adicional = adicional.TrimEnd(',', ' ');
 
             string mensaje = "Datos cargados:\n\n"
                            + "Producto: " + producto + "\n"
                            + "Tipo: " + tipo + "\n"
-                           + "Adicional: " + adicional;
+                           + "Adicional: " + adicional + "\n"
+                           + "Costo Total: " + costobase;
 
             MessageBox.Show(mensaje, "Producto Registrado", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
