@@ -83,57 +83,76 @@ namespace PryCruztest
             int Costorespuesto = 350000;
             double costoinstalacion = 0.15;
             double costoenvio = 0.05;
-            double costogarantia = 0.20; 
+            double costogarantia = 0.20;
 
             double costobase = 0;
 
-            string producto = cmbProducte.SelectedItem.ToString();
+            string producto="";
 
-            string tipo = "(no seleccionado)";
-            
-            if (rdbRemoto.Checked)
+            if (cmbProducte.SelectedItem == null)
             {
-
-                tipo = "Remoto";
-                costobase = Costorespuesto;
-
+                MessageBox.Show("Seleccione un producto", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                
             }
-            else if (rdbEquipo.Checked)
+            else
             {
-                tipo = "Equipo";
-                costobase = costoequipo;
+                producto = cmbProducte.SelectedItem.ToString();
+
+                string tipo = "(no seleccionado)";
+
+                if (rdbRemoto.Checked)
+                {
+
+                    tipo = "Remoto";
+                    costobase = Costorespuesto;
+
+                }
+                else if (rdbEquipo.Checked)
+                {
+                    tipo = "Equipo";
+                    costobase = costoequipo;
+
+                }
+
+                string adicional = "";
+
+                if (chkinstalacion.Checked)
+                {
+                    adicional += "Instalación, ";
+                    costobase = costobase + (costobase * costoinstalacion);
+                }
+
+                if (chkEnvio.Checked)
+                {
+                    adicional += "Envío ";
+                    costobase = costobase + (costobase * costoenvio);
+                }
+
+                if (chkGarantia.Checked)
+                {
+                    adicional += "Garantía, ";
+                    costobase = costobase + (costobase * costogarantia);
+                }
+
+                if (adicional == "") adicional = "(ninguno)";
+                else adicional = adicional.TrimEnd(',', ' ');
+
+                string mensaje = "Datos cargados:\n\n"
+                               + "Producto: " + producto + "\n"
+                               + "Tipo: " + tipo + "\n"
+                               + "Adicional: " + adicional + "\n"
+                               + "Costo Total: " + costobase;
+
+                MessageBox.Show(mensaje, "Producto Registrado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
 
             }
 
-            string adicional = "";
-            
-            if (chkinstalacion.Checked)
-            {
-                adicional += "Instalación, ";
-                costobase = costobase+(costobase* costoinstalacion);
-            }
+        }
 
-            if (chkEnvio.Checked) {
-                adicional += "Envío ";
-                costobase = costobase+ (costobase * costoenvio);
-            }
+        private void rdbRemoto_CheckedChanged(object sender, EventArgs e)
+        {
 
-            if (chkGarantia.Checked)
-            {
-                adicional += "Garantía, ";
-                costobase = costobase+(costobase * costogarantia);
-            }
-
-            if (adicional == "") adicional = "(ninguno)";
-            else adicional = adicional.TrimEnd(',', ' ');
-
-            string mensaje = "Datos cargados:\n\n"
-                           + "Producto: " + producto + "\n"
-                           + "Tipo: " + tipo + "\n"
-                           + "Adicional: " + adicional + "\n"
-                           + "Costo Total: " + costobase;
-
-            MessageBox.Show(mensaje, "Producto Registrado", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

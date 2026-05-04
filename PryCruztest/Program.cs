@@ -16,7 +16,7 @@ namespace PryCruztest
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Frminicio());
+            Application.Run(new frmInicio());
         }
     }
 }

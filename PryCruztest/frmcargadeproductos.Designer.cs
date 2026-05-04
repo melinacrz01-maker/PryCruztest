@@ -132,9 +132,9 @@
             this.grbProductos.Controls.Add(this.lblTipo);
             this.grbProductos.Controls.Add(this.cmbProducte);
             this.grbProductos.Controls.Add(this.lblProductos);
-            this.grbProductos.Location = new System.Drawing.Point(12, 148);
+            this.grbProductos.Location = new System.Drawing.Point(12, 150);
             this.grbProductos.Name = "grbProductos";
-            this.grbProductos.Size = new System.Drawing.Size(368, 253);
+            this.grbProductos.Size = new System.Drawing.Size(368, 240);
             this.grbProductos.TabIndex = 6;
             this.grbProductos.TabStop = false;
             this.grbProductos.Text = "Carga de Productos";
@@ -160,11 +160,12 @@
             this.rdbRemoto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdbRemoto.Location = new System.Drawing.Point(185, 85);
             this.rdbRemoto.Name = "rdbRemoto";
-            this.rdbRemoto.Size = new System.Drawing.Size(75, 19);
+            this.rdbRemoto.Size = new System.Drawing.Size(93, 19);
             this.rdbRemoto.TabIndex = 16;
             this.rdbRemoto.TabStop = true;
-            this.rdbRemoto.Text = "Remoto";
+            this.rdbRemoto.Text = "Respuesto";
             this.rdbRemoto.UseVisualStyleBackColor = false;
+            this.rdbRemoto.CheckedChanged += new System.EventHandler(this.rdbRemoto_CheckedChanged);
             // 
             // rdbEquipo
             // 
@@ -272,7 +273,7 @@
             this.grbDatos.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grbDatos.Location = new System.Drawing.Point(12, 24);
             this.grbDatos.Name = "grbDatos";
-            this.grbDatos.Size = new System.Drawing.Size(368, 118);
+            this.grbDatos.Size = new System.Drawing.Size(363, 110);
             this.grbDatos.TabIndex = 15;
             this.grbDatos.TabStop = false;
             this.grbDatos.Text = "Datos";
@@ -283,13 +284,14 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Azure;
-            this.ClientSize = new System.Drawing.Size(433, 425);
+            this.ClientSize = new System.Drawing.Size(387, 402);
             this.Controls.Add(this.grbProductos);
             this.Controls.Add(this.grbDatos);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmcargadeproductos";
-            this.Text = "Frmcargadeproductos";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Carga De Productos";
             this.Load += new System.EventHandler(this.frmcargadeproductos_Load);
             this.grbProductos.ResumeLayout(false);
             this.grbProductos.PerformLayout();

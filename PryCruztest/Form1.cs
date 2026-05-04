@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace PryCruztest
 {
-    public partial class Frminicio : Form
+    public partial class frmInicio : Form
     {
-        public Frminicio()
+        public frmInicio()
         {
             InitializeComponent();
         }
